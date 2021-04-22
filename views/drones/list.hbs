@@ -1,1 +1,14 @@
 <h2>Available drones</h2>
+{{#if drones}}
+{{#each drones}}
+  <h3>Name: {{this.name}}</h3>
+  <h3>Propellers: {{this.propellers}}</h3>
+  <h3>Max Speed: {{this.maxSpeed}}</h3>
+  <br>
+{{/each}}
+  <a href="/drones/create-form">
+  <button type="submit">Create a new Drone</button>
+  </a>
+{{else}}
+<h1>No drones found. Please refine your search</h1>
+{{/if}}
